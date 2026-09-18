@@ -15,4 +15,12 @@ public class AiConfig {
         return builder.defaultAdvisors(new SimpleLoggerAdvisor()).build();
     }
 
+    @Bean
+    public RestClient restClient(){
+        return RestClient
+                .builder()
+                .baseUrl("http://api.weatherapi.com/v1")
+                .build();
+    }
+
 }
